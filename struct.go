@@ -33,4 +33,16 @@ func main() {
 	}
 
 	fmt.Println(student3)
+
+	// anonymous struct : struct vo danh
+	var anonymous = struct {
+		email string
+		age   int
+	}{
+		"kaiz@gmail.com",
+		17,
+	}
+
+	fmt.Println(anonymous)
+
 }
