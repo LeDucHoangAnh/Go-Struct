@@ -82,4 +82,33 @@ func main() {
 		},
 	}
 	fmt.Println(student_A)
+
+	//compare 2 struct
+	type struct1 struct {
+		id   int
+		name string
+		// info map[int]int
+	}
+
+	s1 := struct1{
+		1,
+		"A",
+		// map[int]int{
+		// 	0: 1,
+		// },
+	}
+
+	s2 := struct1{
+		1,
+		"A",
+		// map[int]int{
+		// 	0: 1,
+		// },
+	}
+
+	if s1 == s2 {
+		fmt.Println("s1 = s2")
+	} else {
+		fmt.Println("s1 != s2")
+	}
 }
