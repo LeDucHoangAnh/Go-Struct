@@ -9,10 +9,28 @@ type Student struct {
 }
 
 func main() {
+	// named
 	student1 := Student{
 		id:   123,
 		name: "Kai",
 	}
 
 	fmt.Println(student1)
+	fmt.Println(student1.id)
+	fmt.Println(student1.name)
+	//
+	student2 := Student{456, "Mary"}
+	fmt.Println(student2)
+	fmt.Println(student2.id)
+	fmt.Println(student2.name)
+
+	var student3 Student = struct {
+		id   int
+		name string
+	}{
+		777,
+		"Ken",
+	}
+
+	fmt.Println(student3)
 }
