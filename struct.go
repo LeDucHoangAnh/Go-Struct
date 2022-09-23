@@ -45,4 +45,13 @@ func main() {
 
 	fmt.Println(anonymous)
 
+	//pointer tro toi 1 struct
+	pointerStruct := &Student{
+		000,
+		"Leo",
+	}
+	fmt.Println(&pointerStruct)
+	fmt.Println(pointerStruct.id)
+	fmt.Println(pointerStruct.name)
+
 }
