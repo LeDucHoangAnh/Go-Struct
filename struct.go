@@ -6,6 +6,12 @@ import "fmt"
 type Student struct {
 	id   int
 	name string
+	info StudentInfo
+}
+type StudentInfo struct {
+	class string
+	email string
+	age   int
 }
 
 func main() {
@@ -19,20 +25,20 @@ func main() {
 	fmt.Println(student1.id)
 	fmt.Println(student1.name)
 	//
-	student2 := Student{456, "Mary"}
-	fmt.Println(student2)
-	fmt.Println(student2.id)
-	fmt.Println(student2.name)
+	// student2 := Student{456, "Mary"}
+	// fmt.Println(student2)
+	// fmt.Println(student2.id)
+	// fmt.Println(student2.name)
 
-	var student3 Student = struct {
-		id   int
-		name string
-	}{
-		777,
-		"Ken",
-	}
+	// var student3 Student = struct {
+	// 	id   int
+	// 	name string
+	// }{
+	// 	777,
+	// 	"Ken",
+	// }
 
-	fmt.Println(student3)
+	// fmt.Println(student3)
 
 	// anonymous struct : struct vo danh
 	var anonymous = struct {
@@ -46,13 +52,13 @@ func main() {
 	fmt.Println(anonymous)
 
 	//pointer tro toi 1 struct
-	pointerStruct := &Student{
-		000,
-		"Leo",
-	}
-	fmt.Println(&pointerStruct)
-	fmt.Println(pointerStruct.id)
-	fmt.Println(pointerStruct.name)
+	// pointerStruct := &Student{
+	// 	000,
+	// 	"Leo",
+	// }
+	// fmt.Println(&pointerStruct)
+	// fmt.Println(pointerStruct.id)
+	// fmt.Println(pointerStruct.name)
 	// anonymous field
 	type noName struct {
 		string
@@ -64,4 +70,16 @@ func main() {
 		18,
 	}
 	fmt.Println(n)
+
+	//Struct long struct - Nested Struct
+	student_A := Student{
+		id:   123,
+		name: "many",
+		info: StudentInfo{
+			class: "001",
+			email: "@gmail.com",
+			age:   28,
+		},
+	}
+	fmt.Println(student_A)
 }
