@@ -111,4 +111,15 @@ func main() {
 	} else {
 		fmt.Println("s1 != s2")
 	}
+	//ZeroValue cua struct
+	var zeroValueStruct ZeroValueStruct
+	fmt.Println(zeroValueStruct)
+	zeroValueStruct.name = "zzz"
+	fmt.Println(zeroValueStruct)
+
+}
+
+type ZeroValueStruct struct {
+	id   int
+	name string
 }
