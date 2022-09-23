@@ -53,5 +53,15 @@ func main() {
 	fmt.Println(&pointerStruct)
 	fmt.Println(pointerStruct.id)
 	fmt.Println(pointerStruct.name)
+	// anonymous field
+	type noName struct {
+		string
+		int
+	}
 
+	n := noName{
+		"Layla",
+		18,
+	}
+	fmt.Println(n)
 }
